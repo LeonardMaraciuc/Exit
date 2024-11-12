@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gioco dell'Impiccato</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sty.css">
+    <link rel="stylesheet" href="assets/css/game.css">
+    <link rel="icon" href="assets/img/Logo.png" type="image/png">
+    <link rel="icon" type="image/x-icon" href="assets/img/Logo.png">
+</head>
+<body class="bg-image" style="background-image: url('assets/img/Game\ background.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    
+    <div class="container-fluid full-height">
+        <div class="row h-50 d-flex">
+            <div class="col">
+                <div class="p-3 border bg-light column-height">
+                    <div id="gameScreen" class="text-left">
+                        <div class="general mb-4" style="margin-left: -25px; margin-top: 80px;">
+                            <h2 id="wordLengthDisplay"></h2>
+                            <div id="wordDisplay" class="h3 mb-2"></div>
+                            <div id="attemptsLeft" class="mb-1"></div>
+                            <div class="remainingTime">-Tempo rimasto:</div>
+                            <div id="timeDisplay" class="h4 mb-3"></div>
+                            <div class="letterposition">
+                                <div id="letterPanel" class="d-flex flex-wrap justify-content-left"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="p-3 border bg-light column-height">
+                    <div class="skullContainer">
+                        <img id="skullImage1" class="skullImage" src="assets/img/Teschio.png" alt="Teschio 1" style="width: 250px; height: auto;">
+                        <img id="skullImage2" class="skullImage" src="assets/img/Teschio.png" alt="Teschio 2" style="width: 250px; height: auto;">
+                        <img id="skullImage3" class="skullImage" src="assets/img/Teschio.png" alt="Teschio 3" style="width: 250px; height: auto;">
+                        <img id="skullImage4" class="skullImage" src="assets/img/Nullo.png" alt="Teschio 4" style="width: 250px; height: auto;">
+                    </div>
+
+                    <div id="resultSquare" class="modal" style="display: none; height: 455px; top: 405px;">
+                        <div class="modal-dialog">
+                            <div class="modal-body">
+                                <img id="resultImage" src="" alt="Immagine del risultato" class="img-fluid mb-3" />
+                                <h2 id="resultMessage"></h2>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="p-3 border bg-light column-height"></div>
+                <button onclick="toggleAudio()" class="audio-button">Audio</button>
+                <audio id="myAudio" loop><source src="assets/audio/Gioco.mp3" type="audio/mpeg"></audio>
+            </div>
+            
+            
+<audio id="vittoriaAudio" src="assets/audio/Vittoria.mp3"></audio>
+<audio id="sconfittaAudio" src="assets/audio/Sconfitta.mp3"></audio>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="game.js"></script>
+
+</body>
+</html>
+

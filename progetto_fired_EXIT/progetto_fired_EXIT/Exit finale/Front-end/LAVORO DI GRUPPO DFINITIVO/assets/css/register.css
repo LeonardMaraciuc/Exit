@@ -1,0 +1,179 @@
+/* Media Queries per la responsività: modificano il layout in base alla larghezza della finestra */
+
+/* Quando la larghezza della finestra è di almeno 1400px */
+@media (min-width: 1400px) {
+    body {
+        transform: scale(1); /* Imposta la scala a 100% */
+    }
+}
+
+/* Quando la larghezza della finestra è tra 1200px e 1399.98px */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    body {
+        transform: scale(0.75); /* Riduce la scala del corpo al 75% */
+        transform-origin: center; /* Imposta il centro come punto di origine per la trasformazione */
+    }
+}
+
+/* Quando la larghezza della finestra è tra 992px e 1199.98px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    body {
+        transform: scale(0.5); /* Riduce la scala del corpo al 50% */
+        transform-origin: center; /* Imposta il centro come punto di origine per la trasformazione */
+    }
+}
+
+/* Stili principali per il corpo della pagina */
+body {
+    overflow: hidden; /* Nasconde eventuali barre di scorrimento */
+    width: 100%; /* Imposta la larghezza al 100% */
+    transform: scale(0.9); /* Imposta la scala al 90% di default */
+    transform-origin: center; /* Imposta il centro come punto di origine per la trasformazione */
+    font-family: Arial, sans-serif; /* Imposta il font della pagina */
+    background-size: cover; /* Copre tutta la finestra con l'immagine di sfondo */
+    background-position: center; /* Posiziona l'immagine di sfondo al centro */
+    background-repeat: no-repeat; /* Impedisce che l'immagine di sfondo si ripeta */
+    height: 100vh; /* Imposta l'altezza della pagina a 100% dell'altezza della finestra */
+    margin: 0; /* Rimuove i margini predefiniti */
+}
+
+/* Stili per l'immagine di sfondo */
+.bg-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; /* Posiziona l'immagine di sfondo al centro */
+    height: 100vh; /* Imposta l'altezza a 100% della finestra */
+}
+
+/* Stile del box di login */
+.log {
+    background: #2c3034; /* Colore di sfondo scuro */
+    padding: 30px;
+    border-radius: 20px; /* Bordo arrotondato */
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.61); /* Ombra sul box */
+    backdrop-filter: blur(26px); /* Sfocatura dello sfondo dietro al box */
+    color: #fff; /* Colore del testo bianco */
+    background: #2c3034;
+}
+
+/* Stile quando il controllo del modulo è in focus (cliccato) */
+.form-control:focus {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0); /* Sfondo trasparente */
+    border-color: #000000;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(58, 57, 57, 0.56); /* Ombra attorno al campo */
+}
+
+/* Campo di input con tema scuro */
+.inputdark {
+    background-color: #131415; /* Colore di sfondo scuro */
+    border-color: #131415; /* Colore del bordo scuro */
+    color: #ffffff; /* Colore del testo bianco */
+}
+
+/* Colore del testo del placeholder */
+.form-control::placeholder {
+    color: rgba(255,255,255,0.39); /* Colore del testo del placeholder con trasparenza */
+    opacity: 1; /* Imposta l'opacità al massimo per il placeholder */
+}
+
+/* Stile del pulsante principale */
+.btn-primary {
+    --bs-btn-color: #fff; /* Colore del testo */
+    --bs-btn-bg: #c90000; /* Colore di sfondo rosso */
+    --bs-btn-border-color: #c90000; /* Colore del bordo rosso */
+    --bs-btn-hover-color: #fff; /* Colore del testo quando il pulsante è in hover */
+    --bs-btn-hover-bg: #f00; /* Colore di sfondo quando il pulsante è in hover */
+    --bs-btn-hover-border-color: #f00; /* Colore del bordo quando il pulsante è in hover */
+    --bs-btn-focus-shadow-rgb: 49,132,253; /* Colore dell'ombra quando il pulsante è in focus */
+    --bs-btn-active-color: #fff; /* Colore del testo quando il pulsante è attivo */
+    --bs-btn-active-bg: #c90000; /* Colore di sfondo quando il pulsante è attivo */
+    --bs-btn-active-border-color: #c90000; /* Colore del bordo quando il pulsante è attivo */
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); /* Ombra interna quando il pulsante è attivo */
+}
+
+/* Pulsante per il toggle (attivazione o disattivazione di qualcosa) */
+#toggleBtn {
+    position: relative;
+    padding: 20px;
+    width: 150px;      
+    height: 60px;
+    background-color: rgb(44, 48, 52); /* Colore di sfondo grigio scuro */
+    border-radius: 10px; /* Bordo arrotondato */
+    border: solid rgb(44, 48, 52); /* Colore del bordo uguale allo sfondo */
+    box-shadow: 0 0 0 .25rem rgba(58, 57, 57, 0.56); /* Ombra sul pulsante */
+    outline: none;
+    box-shadow: none;
+    margin: 15px;
+    color: black; /* Colore del testo */
+    font-weight: bold; /* Grassetto per il testo */
+    font-size: 20px; /* Dimensione del testo */
+    text-align: center; /* Allinea il testo al centro */
+    display: flex; /* Flexbox per il layout */
+    justify-content: center; /* Allinea il contenuto orizzontalmente al centro */
+    align-items: center; /* Allinea il contenuto verticalmente al centro */
+    z-index: 1;
+    top: 127px;
+    left: 1810px; /* Posiziona il pulsante */
+    color: white; /* Colore del testo */
+}
+
+/* Pulsante di chiusura */
+#closeBtn {
+    position: relative;
+    padding: 20px;
+    width: 150px;      
+    height: 60px;
+    background-color: red; /* Colore di sfondo rosso */
+    border-radius: 10px; /* Bordo arrotondato */
+    border: solid red; /* Colore del bordo rosso */
+    box-shadow: 0 0 0 .25rem rgba(58, 57, 57, 0.56); /* Ombra sul pulsante */
+    outline: none;
+    box-shadow: none;
+    margin: 15px;
+    color: black; /* Colore del testo */
+    font-weight: bold; /* Grassetto per il testo */
+    font-size: 20px; /* Dimensione del testo */
+    text-align: center; /* Allinea il testo al centro */
+    display: flex; /* Flexbox per il layout */
+    justify-content: center; /* Allinea il contenuto orizzontalmente al centro */
+    align-items: center; /* Allinea il contenuto verticalmente al centro */
+    z-index: 1;
+    left: 1810px;
+    top: 228px;
+    color: white; /* Colore del testo */
+    margin-top: -200px;
+    overflow: hidden; /* Nasconde contenuti in eccesso */
+}
+
+/* Stile per l'elemento di aiuto */
+.helping {
+    bottom: 260px;
+    position: fixed; /* Posizione fissa rispetto alla finestra */
+    position: absolute; /* Posizionamento assoluto */
+    right: 700px; /* Posiziona a destra */
+    margin: 0 auto;
+    max-width: 1100px; /* Larghezza massima */
+    width: 50%; /* Larghezza relativa */
+    height: auto; /* Altezza automatica */
+    margin: 0 auto;
+    top: -45px; /* Posizionamento dall'alto */
+    right: 825px;
+}
+
+/* Stile per il pulsante di chiusura all'interno dell'elemento di aiuto */
+#closeBtn {
+    right: 700px;
+    max-width: 500px;
+}
+
+/* Transizione per effetto hover */
+.helping {
+    transition: transform 0.3s ease; /* Imposta una transizione per l'effetto hover */
+}
+
+/* Ingrossa l'elemento quando si passa sopra con il mouse */
+.helping:hover {
+    transform: scale(1.5); /* Scala l'elemento al 150% */
+}

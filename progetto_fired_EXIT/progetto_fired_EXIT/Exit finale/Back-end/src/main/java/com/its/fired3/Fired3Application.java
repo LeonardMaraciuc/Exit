@@ -1,0 +1,13 @@
+package com.its.fired3;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Fired3Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Fired3Application.class, args);
+	}
+
+}

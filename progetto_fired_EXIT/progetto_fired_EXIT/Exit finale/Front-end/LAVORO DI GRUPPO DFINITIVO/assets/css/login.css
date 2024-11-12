@@ -1,0 +1,179 @@
+/* Media Queries per responsività: adatta il layout alle dimensioni della finestra del browser */
+
+/* Quando la larghezza della finestra è di almeno 1400px */
+@media (min-width: 1400px) {
+    body {
+        transform: scale(1); /* Imposta la scala al 100% */
+    }
+}
+  
+/* Quando la larghezza della finestra è tra 1200px e 1399.98px */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    body {
+        transform: scale(0.75); /* Riduce la scala al 75% */
+        transform-origin: center; /* Imposta il punto di origine della trasformazione al centro */
+    }
+}
+  
+/* Quando la larghezza della finestra è tra 992px e 1199.98px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    body {
+        transform: scale(0.5); /* Riduce la scala al 50% */
+        transform-origin: center; /* Imposta il punto di origine della trasformazione al centro */
+    }
+}
+
+/* Corpo principale della pagina */
+body {
+    overflow: hidden; /* Nasconde eventuali barre di scorrimento */
+    width: 100%; /* Imposta la larghezza al 100% */
+    transform: scale(0.9); /* Riduce la scala al 90% */
+    transform-origin: center; /* Imposta il punto di origine della trasformazione al centro */
+    font-family: Arial, sans-serif; /* Imposta il font */
+    background-size: cover; /* Imposta l'immagine di sfondo per coprire tutto lo schermo */
+    background-position: center; /* Posiziona l'immagine di sfondo al centro */
+    background-repeat: no-repeat; /* Impedisce che l'immagine di sfondo si ripeta */
+    height: 100vh; /* Imposta l'altezza al 100% della finestra */
+    margin: 0; /* Rimuove i margini */
+}
+
+/* Sfondo con immagine a piena altezza */
+.bg-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh; /* Imposta l'altezza al 100% della finestra */
+}
+
+/* Stile del box di login */
+.log {
+    background: #2c3034; /* Colore di sfondo scuro */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.61); /* Aggiunge un'ombra */
+    backdrop-filter: blur(26px); /* Aggiunge un effetto di sfocatura sullo sfondo */
+    color: #fff; /* Testo bianco */
+    border-radius: 10px;
+    background: #2c3034;
+}
+
+/* Stile quando il controllo del modulo è in focus (cliccato) */
+.form-control:focus {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0); /* Sfondo trasparente */
+    border-color: #000000;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(58, 57, 57, 0.56); /* Aggiunge un'ombra attorno al campo */
+}
+
+/* Stile per i campi di input con tema scuro */
+.inputdark {
+    background-color: #131415;
+    border-color: #131415;
+    color: #ffffff;
+}
+
+/* Colore del testo del placeholder */
+.form-control::placeholder {
+    color: rgba(255,255,255,0.39); /* Colore trasparente per il placeholder */
+    opacity: 1;
+}
+
+/* Stile dei pulsanti */
+.btn-primary {
+    --bs-btn-color: #fff; /* Colore del testo */
+    --bs-btn-bg: #c90000; /* Colore di sfondo */
+    --bs-btn-border-color: #c90000; /* Colore del bordo */
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #f00;
+    --bs-btn-hover-border-color: #f00;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #c90000;
+    --bs-btn-active-border-color: #c90000;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); /* Ombra quando il pulsante è attivo */
+}
+
+/* Pulsante per il toggle (attivare/disattivare qualcosa) */
+#toggleBtn {
+    position: relative;
+    padding: 20px;
+    width: 150px;      
+    height: 60px;
+    background-color: rgb(44, 48, 52);
+    border-radius: 10px;
+    border: solid rgb(44, 48, 52);
+    box-shadow: 0 0 0 .25rem rgba(58, 57, 57, 0.56);
+    outline: none;
+    box-shadow: none;
+    margin: 15px;
+    color: black;            
+    font-weight: bold;
+    font-size: 20px;           
+    text-align: center;          
+    display: flex;               
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 180px;
+    left: 1810px;
+    color: white;
+}
+
+/* Pulsante di chiusura */
+#closeBtn {
+    position: relative;
+    padding: 20px;
+    width: 150px;      
+    height: 60px;
+    background-color: red;
+    border-radius: 10px;
+    border: solid red;
+    box-shadow: 0 0 0 .25rem rgba(58, 57, 57, 0.56);
+    outline: none;
+    box-shadow: none;
+    margin: 15px;
+    color: black;            
+    font-weight: bold;
+    font-size: 20px;           
+    text-align: center;          
+    display: flex;               
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    left: 1810px;
+    top: 281px;
+    color: white;
+    margin-top: -200px;
+    overflow: hidden;
+}
+
+/* Stile del pop-up di aiuto */
+.helping {
+    bottom: 260px;
+    position: fixed;
+    position: absolute;
+    right: 700px;
+    margin: 0 auto; 
+    max-width: 1100px; 
+    width: 50%; 
+    height: auto;
+    margin: 0 auto; 
+    top: -45px;
+    right: 825px;
+}
+
+/* Stile per il pulsante di chiusura nel pop-up */
+#closeBtn {
+    right: 700px;
+    max-width: 500px;
+}
+
+/* Animazione per l'effetto hover sul pop-up di aiuto */
+.helping {
+    transition: transform 0.3s ease; 
+}
+
+.helping:hover {
+    transform: scale(1.5); /* Ingrossa l'elemento quando passa sopra con il mouse */
+}

@@ -1,0 +1,350 @@
+/* Media Query per schermi molto larghi (min-width: 1400px) */
+@media (min-width: 1400px) {
+    body {
+        transform: scale(1); /* Nessuna riduzione del corpo */
+    }
+}
+
+/* Media Query per schermi di larghezza tra 1200px e 1399.98px */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    body {
+        transform: scale(0.75); /* Riduce la scala del corpo al 75% */
+        transform-origin: center; /* Centra l'origine della trasformazione */
+    }
+}
+
+/* Media Query per schermi di larghezza tra 992px e 1199.98px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    body {
+        transform: scale(0.5); /* Riduce la scala del corpo al 50% */
+        transform-origin: center; /* Centra l'origine della trasformazione */
+    }
+}
+
+/* Stili di base per il corpo della pagina */
+body {
+    overflow: hidden; /* Nasconde le barre di scorrimento */
+    width: 100%; /* Imposta la larghezza al 100% della finestra */
+    transform: scale(0.9); /* Riduce la scala del corpo al 90% */
+    transform-origin: center; /* Centra l'origine della trasformazione */
+    font-family: Arial, sans-serif; /* Imposta il font Arial */
+    background-size: cover; /* Copre l'intera area con lo sfondo */
+    background-position: center; /* Posiziona lo sfondo al centro */
+    background-repeat: no-repeat; /* Impedisce la ripetizione dello sfondo */
+    height: 100vh; /* Imposta l'altezza della finestra alla altezza visibile */
+    margin: 0; /* Rimuove il margine predefinito */
+    white-space: nowrap; /* Evita che il contenuto si vada a capo */
+}
+
+/* Impedisce lo scroll della pagina in generale */
+html, body {
+    overflow: hidden;
+}
+
+/* Centro il contenuto del gioco */
+#gameScreen {
+    text-align: center; /* Centra il testo all'interno */
+    margin-top: 50px; /* Distanza dall'alto */
+}
+
+/* Pannello delle lettere */
+#letterPanel {
+    display: flex; /* Disposizione in linea flessibile */
+    top: 200px; /* Posiziona il pannello a 200px dall'alto */
+}
+
+/* Colonna di lettere */
+.letterColumn {
+    display: flex; /* Disposizione in linea flessibile */
+    flex-direction: column; /* Organizza le lettere in colonna */
+    margin: 0 3px; /* Aggiunge spazio tra le colonne */
+}
+
+/* Stile dei pulsanti delle lettere */
+.letterButton {
+    margin: 2px; /* Aggiunge un margine di 2px */
+    padding: 12px; /* Aggiunge un padding di 12px */
+    font-size: 16px; /* Imposta la dimensione del font */
+    cursor: pointer; /* Cambia il cursore quando il mouse è sopra */
+    width: 35px; /* Imposta la larghezza del pulsante */
+    height: 35px; /* Imposta l'altezza del pulsante */
+    background-color: #ffecc7; /* Imposta il colore di sfondo */
+    border: 2px solid #3a0227; /* Imposta il bordo con colore specifico */
+    border-radius: 5px; /* Arrotonda gli angoli del pulsante */
+    transition: background-color 0.3s; /* Aggiunge una transizione per il cambio di colore */
+    color: #3a0227; /* Imposta il colore del testo */
+    font-weight: bold; /* Imposta il testo in grassetto */
+    display: flex; /* Disposizione flessibile per centrare il testo */
+    justify-content: center; /* Centra orizzontalmente il contenuto */
+    align-items: center; /* Centra verticalmente il contenuto */
+    text-align: center; /* Centra il testo */
+}
+
+/* Hover effect per il pulsante delle lettere */
+.letterButton:hover {
+    background-color: #fddf9b; /* Cambia il colore di sfondo al passaggio del mouse */
+}
+
+/* Container delle immagini dei teschi */
+.skullContainer {
+    display: flex; /* Disposizione in linea flessibile */
+    justify-content: flex-start; /* Allinea gli elementi a sinistra */
+    margin-left: 450px; /* Aggiunge margine a sinistra */
+    margin-top: -250px; /* Aggiunge margine in alto */
+}
+
+/* Stili delle immagini dei teschi */
+.skullImage {
+    width: 600px; /* Imposta la larghezza dell'immagine */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    display: none; /* Nasconde l'immagine di default */
+    margin-right: 10px; /* Aggiunge margine a destra */
+}
+
+/* Stile della finestra di risultato */
+#resultSquare {
+    position: fixed; /* Posizione fissa nella pagina */
+    top: 50%; /* Posiziona al centro verticalmente */
+    left: 50%; /* Posiziona al centro orizzontalmente */
+    transform: translate(-50%, -50%); /* Centra perfettamente l'elemento */
+    background-color: white; /* Colore di sfondo bianco */
+    border: 2px solid black; /* Bordo nero */
+    border-radius: 15px; /* Angoli arrotondati */
+    padding: 20px; /* Padding interno */
+    text-align: center; /* Testo centrato */
+    z-index: 1000; /* Assicura che sia sopra gli altri elementi */
+}
+
+/* Stile del display della parola */
+#wordDisplay {
+    font-size: 28px; /* Dimensione del font */
+    margin-top: 20px; /* Spazio sopra il testo */
+}
+
+/* Stile del messaggio di risultato */
+#resultMessage {
+    font-size: 28px; /* Dimensione del font */
+}
+
+/* Stile generale del contenitore */
+.general {
+    position: relative; /* Posizione relativa per contenere gli pseudoelementi */
+    padding: 20px; /* Padding interno */
+    padding-right: 50px; /* Padding specifico per la parte destra */
+    background-color: #c78c3a; /* Colore di sfondo */
+    border-radius: 20px; /* Angoli arrotondati */
+    border: solid 7px #ac6733; /* Bordo solido con colore specifico */
+}
+
+/* Pseudo-elemento before per il bordo esterno */
+.general::before {
+    content: ''; /* Nessun contenuto, solo stile */
+    position: absolute; /* Posizione assoluta rispetto al contenitore */
+    top: -10px; /* Posiziona a -10px dall'alto */
+    left: -10px; /* Posiziona a -10px dalla sinistra */
+    right: -10px; /* Posiziona a -10px dalla destra */
+    bottom: -10px; /* Posiziona a -10px dal basso */
+    border: solid 7px #ac6733; /* Bordo solido */
+    border-radius: 25px; /* Angoli arrotondati */
+    z-index: -1; /* Mette l'elemento sotto gli altri */
+}
+
+/* Pseudo-elemento after per il bordo interno */
+.general::after {
+    content: ''; /* Nessun contenuto, solo stile */
+    position: absolute; /* Posizione assoluta */
+    top: -15px; /* Posiziona a -15px dall'alto */
+    left: -15px; /* Posiziona a -15px dalla sinistra */
+    right: -15px; /* Posiziona a -15px dalla destra */
+    bottom: -15px; /* Posiziona a -15px dal basso */
+    border: solid 7px #3a0227; /* Bordo con colore diverso */
+    border-radius: 30px; /* Angoli arrotondati */
+    z-index: -2; /* Mette l'elemento ancora più in basso */
+}
+
+
+/* Stile per il quadrato di risultato principale */
+#resultSquare {
+    position: fixed; /* Posiziona l'elemento in modo fisso nella pagina */
+    top: 50%; /* Posiziona il quadrato al centro verticale */
+    left: 50%; /* Posiziona il quadrato al centro orizzontale */
+    transform: translate(-50%, -50%); /* Centra esattamente l'elemento, compensando la posizione */
+    background-color: #c78c3a !important; /* Colore di sfondo del quadrato (importante per sovrascrivere altri stili) */
+    padding: 20px; /* Aggiunge spazio interno al quadrato */
+    text-align: center; /* Centra il testo all'interno */
+    z-index: 1000; /* Assicura che l'elemento sia sopra gli altri elementi */
+    display: flex; /* Usa un layout flessibile */
+    flex-direction: column; /* Disposizione delle righe in colonna */
+    justify-content: center; /* Centra verticalmente il contenuto */
+    align-items: center; /* Centra orizzontalmente il contenuto */
+    width: 670px; /* Larghezza del quadrato */
+    height: 390px; /* Altezza del quadrato */
+    margin-top: -382px; /* Spostamento verso l'alto per compensare la posizione */
+    border-radius: 20px; /* Arrotonda gli angoli */
+    border: solid 7px #3a0227; /* Bordo solido di colore scuro */
+    position: relative; /* Imposta la posizione relativa per gli elementi figli */
+}
+
+/* Contenitore per il contenuto del risultato */
+.resultContent {
+    display: flex; /* Usa un layout flessibile */
+    flex-direction: column; /* Disposizione delle righe in colonna */
+    align-items: center; /* Centra orizzontalmente il contenuto */
+    justify-content: center; /* Centra verticalmente il contenuto */
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+}
+
+/* Stile per l'immagine di risultato */
+#resultImage {
+    width: 250px; /* Imposta la larghezza dell'immagine */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    margin-bottom: 20px; /* Aggiunge spazio sotto l'immagine */
+}
+
+/* Contenitore del messaggio */
+.messageContainer {
+    background-color: #ffecc7; /* Colore di sfondo chiaro */
+    border-radius: 15px; /* Arrotonda gli angoli */
+    border: 4px solid #3a0227; /* Bordo solido di colore scuro */
+    padding: 10px 20px; /* Padding interno */
+    width: 60%; /* Imposta la larghezza del contenitore al 60% */
+    text-align: center; /* Centra il testo */
+    margin-top: 30px; /* Aggiunge margine sopra il contenitore */
+}
+
+/* Stile per il messaggio di risultato */
+#resultMessage {
+    font-size: 18px; /* Imposta la dimensione del font */
+    color: #3a0227; /* Colore del testo scuro */
+    font-weight: bold; /* Imposta il testo in grassetto */
+    margin: 0; /* Rimuove il margine */
+}
+
+/* Stili generali per il layout di pagina */
+html, body {
+    height: 100%; /* Imposta l'altezza della pagina al 100% */
+    margin: 0; /* Rimuove il margine predefinito */
+}
+
+.full-height {
+    height: 100vh; /* Imposta l'altezza al 100% della finestra */
+}
+
+.column-height {
+    height: 60vh; /* Imposta l'altezza al 60% della finestra */
+}
+
+.general {
+    min-height: 200px; /* Imposta l'altezza minima */
+}
+
+.d-flex {
+    align-items: center; /* Allinea verticalmente gli elementi */
+}
+
+/* Rende il background e il bordo trasparenti per gli elementi .col .bg-light */
+.col .bg-light {
+    background-color: transparent !important; /* Sfondo trasparente */
+    border-color: transparent !important; /* Bordo trasparente */
+}
+
+/* Stile del contenitore generale per la sezione */
+.general {
+    position: fixed; /* Posiziona l'elemento in modo fisso */
+    top: 100px; /* Posiziona l'elemento a 100px dall'alto */
+    left: 50px; /* Posiziona l'elemento a 50px da sinistra */
+    width: 300px; /* Imposta la larghezza dell'elemento */
+}
+
+/* Contenitore per le immagini dei teschi */
+.skullContainer {
+    position: relative; /* Posizione relativa per contenere gli elementi assoluti */
+    height: 100%; /* Occupa tutta l'altezza disponibile */
+    margin-left: -50px; /* Aggiunge margine negativo a sinistra */
+    bottom: -310px; /* Sposta il contenitore verso il basso */
+}
+
+/* Immagini dei teschi con posizione assoluta */
+.skullImage {
+    position: absolute; /* Posizione assoluta rispetto al contenitore */
+    bottom: 10px; /* Posiziona a 10px dal basso */
+}
+
+/* Posizionamento specifico per ciascuna immagine di teschio */
+#skullImage1 {
+    left: 50%; /* Posiziona al centro orizzontalmente */
+    transform: translateX(-160%); /* Sposta l'immagine a sinistra */
+}
+
+#skullImage2 {
+    left: 50%; /* Posiziona al centro orizzontalmente */
+    transform: translateX(-40%); /* Sposta l'immagine a sinistra */
+}
+
+#skullImage3 {
+    left: 50%; /* Posiziona al centro orizzontalmente */
+    transform: translateX(80%); /* Sposta l'immagine a destra */
+}
+
+#skullImage4 {
+    left: 50%; /* Posiziona al centro orizzontalmente */
+    transform: translateX(200%); /* Sposta l'immagine ulteriormente a destra */
+}
+
+/* Stile per il contenitore audio */
+.AudioContainer {
+    position: relative; /* Posizione relativa per gli elementi figli */
+    padding: 20px; /* Padding interno */
+    background-color: #c78c3a; /* Colore di sfondo */
+    border-radius: 20px; /* Arrotonda gli angoli */
+    border: solid 7px #ac6733; /* Bordo solido */
+}
+
+/* Pulsante per attivare la musica di fondo */
+.audio-button {
+    position: relative; /* Posizione relativa per l'elemento */
+    padding: 20px; /* Padding interno */
+    width: 150px; /* Imposta la larghezza del pulsante */
+    height: 60px; /* Imposta l'altezza del pulsante */
+    background-color: #c78c3a; /* Colore di sfondo */
+    border-radius: 10px; /* Arrotonda gli angoli */
+    border: solid 7px #ac6733; /* Bordo solido */
+    outline: none; /* Rimuove il contorno */
+    box-shadow: none; /* Rimuove l'ombra */
+    margin: 15px; /* Aggiunge margine */
+    color: black; /* Colore del testo */
+    font-weight: bold; /* Imposta il testo in grassetto */
+    font-size: 20px; /* Imposta la dimensione del font */
+    text-align: center; /* Centra il testo */
+    display: flex; /* Usa un layout flessibile */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    z-index: 1; /* Posiziona sopra gli altri elementi */
+    left: 270px; /* Posiziona a 270px da sinistra */
+    bottom: -180px; /* Posiziona a -180px dal basso */
+}
+
+/* Rimuove il contorno e l'ombra quando il pulsante è in focus */
+.audio-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Aggiunge un bordo extra attorno al pulsante quando è in stato "before" */
+.audio-button::before {
+    content: ''; /* Nessun contenuto, solo stile */
+    position: absolute; /* Posizione assoluta */
+    top: -15px; /* Posiziona sopra di 15px */
+    left: -15px; /* Posiziona a sinistra di 15px */
+    right: -15px; /* Posiziona a destra di 15px */
+    bottom: -15px; /* Posiziona sotto di 15px */
+    border: solid 8px #3a0227; /* Bordo solido */
+    border-radius: 20px; /* Arrotonda gli angoli */
+    z-index: -1; /* Posiziona sotto il pulsante */
+}
+
+/* Aggiorna la larghezza dell'immagine del risultato */
+#resultImage {
+    width: 280px; /* Imposta una larghezza maggiore per l'immagine */
+    height: auto; /* Mantiene le proporzioni */
+}

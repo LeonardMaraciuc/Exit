@@ -1,0 +1,62 @@
+@media (min-width: 1400px) {
+  body {
+      transform: scale(1);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  body {
+      transform: scale(0.75);
+      transform-origin: center;
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body {
+      transform: scale(0.5);
+      transform-origin: center; 
+  }
+}
+
+
+body {
+  background-image: url('Bakgrownd.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center; 
+  background-attachment: fixed; 
+  height: 100vh; 
+  margin: 0;
+  overflow: hidden; 
+}
+
+#aggiunginumeri {
+  height: 100%; 
+  overflow-y: auto; 
+}
+
+
+#aggiunginumeri::-webkit-scrollbar {
+  display: none;
+}
+
+#aggiunginumeri {
+  scrollbar-width: none;
+}
+
+.forumsussante { 
+  padding: 30px;
+  border-radius: 10px;
+  background: #2c3034 ;
+  border: solid 2px #4c5053;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  text-align: center;
+}
+
